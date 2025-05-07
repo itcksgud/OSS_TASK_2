@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.1"
+    "next": "15.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-kakao-maps-sdk": "^1.1.27"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/navermaps": "^3.7.9",
     "@types/node": "^20",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "typescript": "^5"
   }
 }
