@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌦️ 날씨 기반 위치 서비스 - 기술 명세서
 
-## Getting Started
+## 📝 프로젝트 개요
+- 사용자가 **지도에서 위치를 선택**하면, 해당 위치의 날씨 정보를 제공합니다.
+- **React + Next.js** 기반의 풀스택 웹 애플리케이션입니다.
+- **기상청 날씨 API**, **카카오 주소/지도 API**를 통해 실시간 날씨 조회 기능을 구현했습니다.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧱 사용 기술 스택
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🖥️ 프론트엔드
+- **React**
+  - 컴포넌트 기반 UI 구성
+- **TypeScript**
+  - 정적 타입으로 안정성 확보
+- **카카오 지도 API**
+  - 지도 클릭 이벤트 처리
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠️ 백엔드
+- **Next.js (App Router 기반)**
+  - API Route를 통해 기상청 API 호출 처리
+  - 서버사이드 렌더링(SSR) 일부 적용 가능
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔌 외부 API
+- **기상청 단기예보 API**
+  - 날씨, 강수확률, 풍속 등 주요 정보 제공
+- **카카오 로컬/지도 API**
+  - 좌표 ↔ 주소 변환
+  - 지도 인터랙션 처리
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 주요 기능
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| 기능 | 설명 |
+|------|------|
+| 위치 선택 | 카카오 지도에서 클릭하거나 주소를 입력하여 위치 지정 |
+| 좌표 변환 | 주소 → 좌표, 좌표 → 격자(Grid) 변환을 통해 기상청 API와 연동 |
+| 날씨 정보 | 현재 날씨, 24시간 강수확률, 풍속 등의 정보를 시각적으로 표시 |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔐 API Key 설정
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- API Key는 보안을 위해 코드에 직접 포함하지 않았습니다.
+- 실행 전 댓글을 참조하여 파일에 내용을 추가해주세요.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
